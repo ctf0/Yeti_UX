@@ -22,6 +22,63 @@ PHP, Laravel Blade, SQL
 - plz check [#2](https://github.com/ctf0/Seti_UX/issues/2).
 
 ## Previews
+
+**HTML**
+
+![Seti Screenshot](./ss/html.png)
+
+**CSS3**
+
+![Seti Screenshot](./ss/css.png)
+
+**JS** (work in progress)
+
+![Seti Screenshot](./ss/js.png)
+
+**Angular** (work in progress)
+
+![Seti Screenshot](./ss/angular.png)
+
+**LESS** (Sass/Scss are similar)
+
+![Seti Screenshot](./ss/less.png)
+
+**BLADE**
+
+![Seti Screenshot](./ss/blade.png)
+
+**PHP**
+
+![Seti Screenshot](./ss/php.png)
+
+**DIFF**
+
+![Seti Screenshot](./ss/diff.png)
+
+**JADE**
+
+![Seti Screenshot](./ss/jade.png)
+
+**PYTHON**
+
+![Seti Screenshot](./ss/python.png)
+
+**MARKDOWN**
+
+![Seti Screenshot](./ss/md.png)
+
+**JSON** (up-to 19 level)
+
+![Seti Screenshot](./ss/json.png)
+
+**XML**
+
+![Seti Screenshot](./ss/xml.png)
+
+**PLIST**
+
+![Seti Screenshot](./ss/plist.png)
+
 ## ToDO
 
 1. Better support for AngularJs (need some help with regex for scopes).
