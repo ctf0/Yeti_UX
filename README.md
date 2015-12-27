@@ -19,7 +19,7 @@ PHP, Laravel Blade, SQL
 
 ### Notes
 
-- plz check [#2](https://github.com/ctf0/Seti_UX/issues/2).
+- check [#2](https://github.com/ctf0/Seti_UX/issues/2).
 
 ## Previews
 
