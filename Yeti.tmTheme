@@ -285,8 +285,11 @@
 			<string>keyword.operator.assignment</string>
 			<key>settings</key>
 			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
 				<key>foreground</key>
-				<string>#a074c4</string>
+				<string>#755838</string>
+				<!-- <string>#a074c4</string> -->
 			</dict>
 		</dict>
 		<dict>
@@ -4768,6 +4771,101 @@
 			<dict>
 				<key>foreground</key>
 				<string>#b2a495</string>
+			</dict>
+		</dict>
+
+		<!-- ====================================
+		MakeFile
+		====================================== -->
+		<!-- $(var) -->
+		<dict>
+			<key>scope</key>
+			<string>variable.source.makefile</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#000</string>
+				<key>background</key>
+				<string>#00000008</string>
+			</dict>
+		</dict>
+		<!-- $() -->
+		<dict>
+			<key>scope</key>
+			<string>punctuation.definition.variable.begin.makefile, punctuation.definition.variable.end.makefile</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#000</string>
+				<key>background</key>
+				<string>#00000015</string>
+			</dict>
+		</dict>
+		<!-- @ -->
+		<dict>
+			<key>scope</key>
+			<string>support.variable.makefile</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#cc9816</string>
+			</dict>
+		</dict>
+		<!-- echo -->
+		<dict>
+			<key>scope</key>
+			<string>support.function.makefile</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#755838</string>
+			</dict>
+		</dict>
+		<!-- function -->
+		<dict>
+			<key>scope</key>
+			<string>entity.name.function.makefile</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#c136d9</string>
+				<key>background</key>
+				<string>#c136d920</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>scope</key>
+			<string>meta.function.prerequisites.makefile</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#16c8a5</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>scope</key>
+			<string>meta.function.body.makefile</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#009FFF</string>
+			</dict>
+		</dict>
+		<!-- % -->
+		<dict>
+			<key>scope</key>
+			<string>keyword.operator.percent.makefile</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#755838</string>
+				<!-- <string>#a074c4</string> -->
 			</dict>
 		</dict>
 
