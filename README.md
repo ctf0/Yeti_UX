@@ -9,6 +9,8 @@ GitGutter
 MarkDown (& MarkDown Extended)
 diff
 plist
+MakeFile
+Ruby
 Python
 JSON, XML
 JS (& JavaScriptNext), Coffee, AngularJs (partial support)

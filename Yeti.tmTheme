@@ -336,7 +336,8 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#f0516f</string>
+				<string>#603F80</string>
+				<!-- <string>#f0516f</string> -->
 			</dict>
 		</dict>
 
@@ -500,7 +501,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#EBFF59</string>
+				<string>#cc9816</string>
 			</dict>
 		</dict>
 		<dict>
@@ -2702,9 +2703,11 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string></string>
+				<string>bold</string>
 				<key>foreground</key>
-				<string>#FFA325</string>
+				<string>#c136d9</string>
+				<key>background</key>
+				<string>#c136d920</string>
 			</dict>
 		</dict>
 		<dict>
@@ -4866,6 +4869,169 @@
 				<key>foreground</key>
 				<string>#755838</string>
 				<!-- <string>#a074c4</string> -->
+			</dict>
+		</dict>
+
+		<!-- ====================================
+		Ruby
+		====================================== -->
+		<!-- $(var) -->
+		<dict>
+			<key>scope</key>
+			<string>variable.source.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#fff</string>
+			</dict>
+		</dict>
+		<!-- : / . / :: -->
+		<dict>
+			<key>scope</key>
+			<string>punctuation.definition.constant.ruby, punctuation.separator.method.ruby, punctuation.separator.inheritance.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#755838</string>
+			</dict>
+		</dict>
+		<!-- ? : / ::-->
+		<dict>
+			<key>scope</key>
+			<string>punctuation.separator.other.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#755838</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>scope</key>
+			<string>constant.other.symbol.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#16c8a5</string>
+			</dict>
+		</dict>
+		<!-- echo -->
+		<dict>
+			<key>scope</key>
+			<string>support.function.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#fe5a7d80</string>
+				<key>background</key>
+				<string>#2f041e50</string>
+			</dict>
+		</dict>
+		<!-- function -->
+		<dict>
+			<key>scope</key>
+			<string>entity.name.function.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#cc9816</string>
+			</dict>
+		</dict>
+		<!-- class -->
+		<dict>
+			<key>name</key>
+			<string>Class</string>
+			<key>scope</key>
+			<string>support.class.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#009FFF</string>
+			</dict>
+		</dict>
+		<!-- class / def / end-->
+		<dict>
+			<key>name</key>
+			<string>Class</string>
+			<key>scope</key>
+			<string>keyword.control.class.ruby, keyword.control.def.ruby, keyword.control.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#009FFF</string>
+			</dict>
+		</dict>
+		<!-- '' / ""-->
+		<dict>
+			<key>name</key>
+			<string>Class</string>
+			<key>scope</key>
+			<string>string.quoted.single.ruby, string.quoted.double.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#009FFF</string>
+				<key>background</key>
+				<string>#94DDFF30</string>
+			</dict>
+		</dict>
+		<!-- (...) -->
+		<dict>
+			<key>scope</key>
+			<string>punctuation.definition.parameters.ruby, punctuation.section.embedded.ruby, punctuation.section.function.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#b1a394</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>scope</key>
+			<string>string.quoted.other.literal.lower.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#CD3F45</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>scope</key>
+			<string>entity.other.inherited-class.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#466380</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>scope</key>
+			<string>keyword.other.special-method.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#3d556d</string>
+			</dict>
+		</dict>
+		<!-- do -->
+		<dict>
+			<key>scope</key>
+			<string>keyword.control.start-block.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#CD3F45</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>scope</key>
+			<string>source.ruby.embedded.source</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#6c5fa9</string>
+				<key>background</key>
+				<string>#6c5fa925</string>
 			</dict>
 		</dict>
 
