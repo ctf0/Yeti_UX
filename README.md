@@ -29,7 +29,7 @@ PHP, Laravel Blade, SQL
 
 ## Known issues
 
-Compare [issue #2 of ctf0/Seti_UX](https://github.com/ctf0/Seti_UX/issues/2).
+Compare [ctf0/Seti_UX#2](https://github.com/ctf0/Seti_UX/issues/2).
 
 ## Previews
 
