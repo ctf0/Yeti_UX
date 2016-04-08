@@ -1,4 +1,4 @@
-v1.2 (8-04-2016)
+v1.1 (8-04-2016)
 -------------------
 1. Dropped support for "css3, js_next, html5, angular" now only support native syntax (at least till the beta phase is completed)'
 2. less/scss/sass have a better/less cluttered coloring now.
