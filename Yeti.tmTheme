@@ -30,18 +30,12 @@
 					<string>#2F627750</string>
 					<key>gutter</key>
 					<string>#eceae8</string>
-					<!-- <string>#e5e1db</string> -->
 					<key>gutterForeground</key>
 					<string>#c4c0bb</string>
-
-					<!-- the same color for loading progressbar -->
 					<key>selection</key>
 					<string>#ded9cd</string>
-
-					<!-- <key>selectionForeground</key> -->
-					<!-- <string>#544e47</string> -->
 					<key>selectionBorder</key>
-	                <string>#00000040</string>
+					<string>#00000040</string>
 					<key>inactiveSelection</key>
 					<string>#2F627750</string>
 					<key>bracketContentsOptions</key>
@@ -256,7 +250,7 @@
 				<key>name</key>
 				<string>Tag</string>
 				<key>scope</key>
-				<string>entity.name.tag</string>
+				<string>entity.name.tag, text.blade text.html.basic meta.tag.block.any.html entity.name.tag.block.any.html</string>
 				<key>settings</key>
 				<dict>
 					<key>foreground</key>
@@ -390,7 +384,7 @@
 				<key>name</key>
 				<string>Class</string>
 				<key>scope</key>
-				<string>meta.class.identifier, entity.name.type.class, support.class, variable.other.class</string>
+				<string>meta.class.identifier, entity.name.type.class, support.class.php, variable.other.class</string>
 				<key>settings</key>
 				<dict>
 					<key>foreground</key>
@@ -506,7 +500,7 @@
 				<key>settings</key>
 				<dict>
 					<key>foreground</key>
-					<string>#EF9975</string>
+					<string>#603F80</string>
 				</dict>
 			</dict>
 			<dict>
@@ -997,20 +991,10 @@
 				</dict>
 			</dict>
 
-			<dict>
-				<key>scope</key>
-				<string>text.html.laravel-blade meta.string-contents.quoted</string>
-				<key>settings</key>
-				<dict>
-					<key>foreground</key>
-					<string>#009FFF</string>
-				</dict>
-			</dict>
-
 			<!-- echo / array & related -->
 			<dict>
 				<key>scope</key>
-				<string>support.function.construct.php, support.function.array.php, meta.function-call.php</string>
+				<string>support.function.construct.php, support.function.array.php, meta.function-call.php variable.function.php</string>
 				<key>settings</key>
 				<dict>
 					<key>foreground</key>
@@ -1058,7 +1042,7 @@
 				<key>settings</key>
 				<dict>
 					<key>foreground</key>
-					<string>#009FFF</string>
+					<string>#735154</string>
 				</dict>
 			</dict>
 			<dict>
@@ -1123,7 +1107,7 @@
 			<!-- class -->
 			<dict>
 				<key>scope</key>
-				<string>support.class.php</string>
+				<string>entity.name.class.php</string>
 				<key>settings</key>
 				<dict>
 					<key>foreground</key>
@@ -1213,13 +1197,25 @@
 				<key>name</key>
 				<string>var name</string>
 				<key>scope</key>
-				<string>variable.other.php</string>
+				<string>variable.other.php, variable.language.php, variable.parameter.php</string>
 				<key>settings</key>
 				<dict>
+					<key>fontStyle</key>
+					<string>normal</string>
 					<key>foreground</key>
 					<string>#000</string>
 					<key>background</key>
 					<string>#00000008</string>
+				</dict>
+			</dict>
+
+			<dict>
+				<key>scope</key>
+				<string>meta.function-call.method.php variable.function.php</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#16c8a5</string>
 				</dict>
 			</dict>
 
@@ -1263,7 +1259,7 @@
 			<!-- , / () / [] / ; / ? -->
 			<dict>
 				<key>scope</key>
-				<string>source.php.embedded.block.html, punctuation.definition.array.begin.php, punctuation.definition.array.end.php, punctuation.definition.parameters.begin.php, punctuation.definition.parameters.end.php, meta.embedded.block.php, punctuation.section.array.begin.php, punctuation.section.array.end.php, punctuation.terminator.expression.php</string>
+				<string>source.php.embedded.block.html, punctuation.definition.array.begin.php, punctuation.definition.array.end.php, punctuation.definition.parameters.begin.php, punctuation.definition.parameters.end.php, meta.embedded.block.php, punctuation.section.array.begin.php, punctuation.section.array.end.php, punctuation.terminator.expression.php, meta.group.php punctuation</string>
 				<key>settings</key>
 				<dict>
 					<key>foreground</key>
@@ -1328,7 +1324,7 @@
 			<!-- ::method -->
 			<dict>
 				<key>scope</key>
-				<string>meta.function-call.static.php</string>
+				<string>meta.function-call.static.php variable.function.php</string>
 				<key>settings</key>
 				<dict>
 					<key>foreground</key>
@@ -1400,40 +1396,52 @@
 			Laravel Blade
 			====================================== -->
 
-			<!-- @... -->
 			<dict>
 				<key>scope</key>
-				<string>entity.name.tag.laravel-blade</string>
+				<string>meta.string-contents.quoted</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#009FFF</string>
+				</dict>
+			</dict>
+
+			<!-- attrs -->
+			<dict>
+				<key>scope</key>
+				<string>text.blade text meta constant.other.inline-data.html</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#48FFC2</string>
+				</dict>
+			</dict>
+
+			<!-- @txt -->
+			<dict>
+				<key>scope</key>
+				<string>source.php.embedded.line.html support.constant.laravel-blade, text.blade text meta.embedded.line.php entity.name.tag.block.any.html, text.blade entity.name.tag.block.any.html</string>
 				<key>settings</key>
 				<dict>
 					<key>fontStyle</key>
 					<string>bold</string>
 					<key>foreground</key>
-					<string>#755838</string>
+					<string>#cc9816</string>
+					<key>background</key>
+					<string>#eceae8</string>
 				</dict>
 			</dict>
 
-			<!-- {{...}} -->
+			<!-- @{{ }} -->
 			<dict>
 				<key>scope</key>
-				<string>source.php.embedded.line.html support.constant.laravel-blade, embedded.line.html support.constant.laravel-blade</string>
+				<string>embedded.line.html support.constant.laravel-blade, text.blade scope:text.html.basic entity.name.tag.block.any.html</string>
 				<key>settings</key>
 				<dict>
-					<key>fontStyle</key>
-					<string></string>
 					<key>foreground</key>
 					<string>#cc9816</string>
-				</dict>
-			</dict>
-
-			<!-- "{{...}}" -->
-			<dict>
-				<key>scope</key>
-				<string>text.html.laravel-blade variable.parameter.html, text.html.laravel-blade variable.parameter2.html</string>
-				<key>settings</key>
-				<dict>
-					<key>foreground</key>
-					<string>#603F80</string>
+					<key>background</key>
+					<string>#eceae8</string>
 				</dict>
 			</dict>
 
@@ -2165,16 +2173,348 @@
 			</dict>
 
 			<!-- ====================================
-			SCSS
+			Sass / SCSS
 			====================================== -->
 
 			<dict>
+				<key>name</key>
+				<string>Block comment</string>
 				<key>scope</key>
-				<string>punctuation.whitespace.comment.trailing.scss</string>
+				<string>comment.block.sass</string>
+				<key>settings</key>
+				<dict>
+					<key>fontStyle</key>
+					<string>italic</string>
+					<key>foreground</key>
+					<string>#41535b</string>
+					<key>background</key>
+					<string>#41535b30</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Comment //</string>
+				<key>scope</key>
+				<string>comment.line.double-slash.sass, comment.line.scss, punctuation.whitespace.comment.trailing.scss</string>
 				<key>settings</key>
 				<dict>
 					<key>foreground</key>
-					<string>#FF0040</string>
+					<string>#c4bab1</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>property value</string>
+				<key>scope</key>
+				<string>meta.property-value.scss, support.type.property-name.sass </string>
+				<key>settings</key>
+				<dict>
+					<key>fontStyle</key>
+					<string>normal</string>
+					<key>foreground</key>
+					<string>#CD3F45</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>support property</string>
+				<key>scope</key>
+				<string>support.type.property-name.scss</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#41535b</string>
+				</dict>
+			</dict>
+
+			<!-- @ -->
+			<dict>
+				<key>scope</key>
+				<string>punctuation.definition.keyword.scss</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#F6AA11</string>
+				</dict>
+			</dict>
+
+			<!-- @include -->
+			<dict>
+				<key>scope</key>
+				<string>keyword.control.at-rule.include.scss</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#02AEFF</string>
+				</dict>
+			</dict>
+
+			<!-- @import ""-->
+			<dict>
+				<key>scope</key>
+				<string>meta.at-rule.import.scss, meta.at-rule.import.scss variable.parameter.url.css</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#b2a495</string>
+				</dict>
+			</dict>
+
+			<!-- "url" / ((...)) -->
+			<dict>
+				<key>scope</key>
+				<string>variable.parameter.url.scss</string>
+				<key>settings</key>
+				<dict>
+					<key>fontStyle</key>
+					<string>normal</string>
+					<key>foreground</key>
+					<string>#687073</string>
+					<key>background</key>
+					<string>#00000010</string>
+				</dict>
+			</dict>
+
+			<!-- @include -->
+			<dict>
+				<key>scope</key>
+				<string>meta.at-rule.include.scss</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#fff</string>
+				</dict>
+			</dict>
+
+			<!-- @media -->
+			<dict>
+				<key>scope</key>
+				<string>meta.at-rule.media.scss</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#02AEFF</string>
+					<key>background</key>
+					<string>#02AEFF10</string>
+				</dict>
+			</dict>
+
+			<!-- var -->
+			<dict>
+				<key>scope</key>
+				<string>variable.scss variable.scss, variable.scss</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#31485e</string>
+				</dict>
+			</dict>
+
+			<!-- mixin -->
+			<dict>
+				<key>scope</key>
+				<string>meta.at-rule.mixin.scss entity.name.function.scss</string>
+				<key>settings</key>
+				<dict>
+					<key>fontStyle</key>
+					<string>italic</string>
+					<key>foreground</key>
+					<string>#16c8a5</string>
+					<key>background</key>
+					<string>#1CFF7B10</string>
+				</dict>
+			</dict>
+			<!-- vars -->
+			<dict>
+				<key>scope</key>
+				<string>variable.other.scss</string>
+				<key>settings</key>
+				<dict>
+					<key>fontStyle</key>
+					<string>normal</string>
+					<key>foreground</key>
+					<string>#687073</string>
+					<key>background</key>
+					<string>#00000010</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>number</string>
+				<key>scope</key>
+				<string>constant.numeric.scss, constant.numeric.sass</string>
+				<key>settings</key>
+				<dict>
+					<key>fontStyle</key>
+					<string>normal</string>
+					<key>foreground</key>
+					<string>#CD3F45</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>other unit scss</string>
+				<key>scope</key>
+				<string>keyword.other.unit.scss, constant.other.color.rgb-value.scss, constant.other.color.rgb-value.sass</string>
+				<key>settings</key>
+				<dict>
+					<key>fontStyle</key>
+					<string>normal</string>
+					<key>foreground</key>
+					<string>#68757b</string>
+				</dict>
+			</dict>
+
+			<dict>
+				<key>scope</key>
+				<string>entity.other.attribute-name.attribute.scss</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#16c8a5</string>
+				</dict>
+			</dict>
+
+			<dict>
+				<key>scope</key>
+				<string>string.quoted.double.attribute-value.scss</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#b1a394</string>
+				</dict>
+			</dict>
+
+			<!-- & / #{} -->
+			<dict>
+				<key>scope</key>
+				<string>entity.name.tag.reference.scss, variable.interpolation.scss</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#009FFF</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>sass class</string>
+				<key>scope</key>
+				<string>entity.other.attribute-name.class.sass</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#1CFF7B</string>
+				</dict>
+			</dict>
+
+			<!-- : / ; -->
+			<dict>
+				<key>scope</key>
+				<string>punctuation.separator.key-value.scss, punctuation.terminator.rule.scss</string>
+				<key>settings</key>
+				<dict>
+					<key>fontStyle</key>
+					<string>normal</string>
+					<key>foreground</key>
+					<string>#755838</string>
+				</dict>
+			</dict>
+
+			<!-- '...' -->
+			<dict>
+				<key>scope</key>
+				<string>string.quoted.single.scss, string.quoted.single.sass</string>
+				<key>settings</key>
+				<dict>
+					<key>fontStyle</key>
+					<string>normal</string>
+					<key>foreground</key>
+					<string>#009FFF</string>
+					<key>background</key>
+					<string>#009FFF10</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>!important</string>
+				<key>scope</key>
+				<string>keyword.other.important.scss, keyword.other.important.sass, keyword.other.default.scss</string>
+				<key>settings</key>
+				<dict>
+					<key>fontStyle</key>
+					<string>bold</string>
+					<key>foreground</key>
+					<string>#c136d9</string>
+					<key>background</key>
+					<string>#c136d920</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>SASS: Placeholder Selector</string>
+				<key>scope</key>
+				<string>entity.other.attribute-name.placeholder-selector.sass</string>
+				<key>settings</key>
+				<dict>
+					<key>fontStyle</key>
+					<string> italic</string>
+					<key>foreground</key>
+					<string>#FF5699</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>SASS: Attribute Selector</string>
+				<key>scope</key>
+				<string>entity.other.attribute-selector.sass</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#817DFF</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>SASS: Regex</string>
+				<key>scope</key>
+				<string>keyword.other.regex.sass</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#FFE4A6</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>SASS: Comma</string>
+				<key>scope</key>
+				<string>comment.punctuation.comma.sass</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#FCFDFF</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>RGB Color</string>
+				<key>scope</key>
+				<string>punctuation.definition.constant.scss</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#009FFF</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>SASS: Semicolon</string>
+				<key>scope</key>
+				<string>comment.punctuation.semicolon.sass</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#6969FA</string>
 				</dict>
 			</dict>
 
@@ -2324,6 +2664,324 @@
 				<dict>
 					<key>foreground</key>
 					<string>#42535a</string>
+				</dict>
+			</dict>
+
+			<!-- ====================================
+			JavaScriptNext
+			====================================== -->
+
+			<dict>
+				<key>scope</key>
+				<string>variable.other.readwrite.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#687073</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>entity.name.type.new.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#CD3F45</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>meta.function.json.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#e7b22b</string>
+					<!-- <string>#755838</string> -->
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>variable.other.constant.js</string>
+				<key>settings</key>
+				<dict>
+					<key>fontStyle</key>
+					<string>italic bold</string>
+					<key>foreground</key>
+					<string>#6b8675</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>meta.function.js punctuation.definition.parameters.begin.js, meta.function.js punctuation.definition.parameters.end.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#d1c9c0</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>meta.group.braces.round meta.group.braces.square meta.function.js variable.parameter.function.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#d1c9c0</string>
+					<key>background</key>
+					<string>#02AEFF30</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>variable.other.dollar.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#d1c9c0</string>
+					<!-- <key>background</key> -->
+				</dict>
+			</dict>
+			<!-- $ -->
+			<dict>
+				<key>scope</key>
+				<string>punctuation.dollar.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#41535b</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>variable.other.object.js, variable.parameter.function.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#687073</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>keyword.operator.accessor.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#d1c9c0</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>punctuation.separator.key-value.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#755838</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>meta.function-call.method.with-arguments.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#16c8a5</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>meta.function-call.without-arguments.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#735154</string>
+					<key>background</key>
+					<string>#73515415</string>
+					<key>fontStyle</key>
+					<string>italic</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>meta.group.braces.curly meta.function-call.with-arguments.js, source.js meta.function-call.with-arguments.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#41535b</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>text.html.laravel-blade meta.function-call.with-arguments.js entity.name.function.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#a074c4</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>meta.function-call.static.with-arguments.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#a074c4</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>meta.function-call.method.without-arguments.js meta.group.braces.round.function.arguments.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#d1c9c0</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>meta.function-call.method.without-arguments.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#16c8a5</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>meta.property.object.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#aa00aa</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>meta.group.braces.curly variable.language.this.js</string>
+				<key>settings</key>
+				<dict>
+					<key>fontStyle</key>
+					<string>bold italic</string>
+					<key>foreground</key>
+					<string>#CD3F45</string>
+					<key>background</key>
+					<string>#eceae8</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>meta.group.braces.curly meta.group.braces.round variable.language.this.js</string>
+				<key>settings</key>
+				<dict>
+					<key>fontStyle</key>
+					<string>bold</string>
+					<key>foreground</key>
+					<string>#CD3F45</string>
+					<key>background</key>
+					<string>#eceae8</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>support.type.object.dom.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#fda100</string>
+					<key>background</key>
+					<string>#CD3F4510</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>support.type.object.node.js, support.type.object.firebug.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#d1c9c0</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>meta.function-call.static.without-arguments.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#d1c9c0</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>meta.function.static.js entity.name.function.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#aa00aa</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>meta.function.static.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#755838</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>keyword.operator.assignment.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#755838</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>keyword.control.conditional.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#755838</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>support.class.builtin.js</string>
+				<key>settings</key>
+				<dict>
+					<key>fontStyle</key>
+					<string>italic</string>
+					<key>foreground</key>
+					<string>#fda100</string>
+					<key>background</key>
+					<string>#CD3F4530</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>string.unquoted.label.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#b2a495</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>meta.function.js entity.name.function.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#cc9816</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>scope</key>
+				<string>keyword.control.flow.js</string>
+				<key>settings</key>
+				<dict>
+					<key>foreground</key>
+					<string>#755838</string>
 				</dict>
 			</dict>
 
