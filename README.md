@@ -21,10 +21,6 @@ Css, Less, Sass/Scss
 PHP, Laravel Blade, SQL
 ```
 
-## Extended Support
-
-Check [ctf0/Seti_UX#2](https://github.com/ctf0/Seti_UX/issues/2).
-
 ## Previews
 
 **HTML**
