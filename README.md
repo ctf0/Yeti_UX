@@ -58,9 +58,3 @@ PHP, Laravel Blade, SQL
 **XML**
 
 ![Yeti Screenshot](./ss/xml.png)
-
-## ToDO
-
-* [ ] Better support for AngularJs (need some help with regex for scopes).
-* [ ] Better support for Sass/Scss. (we need a better syntax definition ,more like "Less" ).
-* [ ] Better support for Python.
